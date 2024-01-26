@@ -21,3 +21,8 @@ def rgb(r, g, b)
 
   return result
 end
+
+# Top Rated Answer
+def rgb(r, g, b)
+  "%.2X%.2X%.2X" % [r,g,b].map{|i| [[i,255].min,0].max}
+end
